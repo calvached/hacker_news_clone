@@ -4,6 +4,21 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
+
+.nav {
+  background-color: tomato;
+}
+
+.nav ul li {
+  display: inline;
+  padding: 5px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
 th {
   text-align: left;
 }
