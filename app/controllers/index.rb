@@ -21,3 +21,9 @@ post '/signup' do
                      password_confirmation: params[:password_confirmation])
   redirect '/login'
 end
+
+
+get '/profile/:id' do
+  @id = session[:user_id]
+  erb :profile
+end
