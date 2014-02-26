@@ -1,7 +1,8 @@
 <div class='container'>
+  <h3><%= @username %> welcome to your profile page!</h3>
 
-<a href="">View Posts</a>
-<a href="">View Comments</a>
-<a href="">Create a Post</a>
+  <a href="/posts/<%= @id %>">View Posts</a>
+  <a href="/comments/<%= @id %>">View Comments</a>
+  <a href="/create_post">Create a Post</a>
 
 </div>

@@ -11,6 +11,7 @@ post '/login' do
   user = User.find_by(username: params[:username])
   if user && user.authenticate(params[:password])
     session[:user_id] = user.id
+    session[:username] = user.username
     redirect '/'
   end
 end
@@ -25,5 +26,19 @@ end
 
 get '/profile/:id' do
   @id = session[:user_id]
+  @username = session[:username]
   erb :profile
+end
+
+
+get '/create_post' do
+  erb :create_post
+end
+
+post '/create_post' do
+  post = Post.create(user_id: session[:user_id],
+              title: params[:title],
+              url: params[:url])
+
+  redirect "/posts/#{post.id}"
 end
