@@ -25,6 +25,12 @@ end
 
 get '/profile/:id/posts' do
   @user = User.find(params[:id])
-  @posts = @user.posts
+
   erb :user_posts
+end
+
+get '/profile/:id/comments' do
+  @user = User.find(params[:id])
+
+  erb :user_comments
 end
