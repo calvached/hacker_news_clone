@@ -1,0 +1,9 @@
+<div class='container'>
+  <h3><a href='<%= @post.url %>'><%= @post.title %></a><span> (<%= @post.url %>)</span></h3>
+
+  <form action='/posts/<%= @post.id %>' method='post'>
+    <textarea rows='4' cols='50' name='content' placeholder='Enter comment here'></textarea>
+    <input type='submit' value='Add Comment'>
+  </form>
+
+</div>
