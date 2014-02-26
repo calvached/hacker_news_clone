@@ -9,6 +9,11 @@
   background-color: tomato;
 }
 
+.nav ul {
+  padding: 5px;
+  margin: 0;
+}
+
 .nav ul li {
   display: inline;
   padding: 5px;
