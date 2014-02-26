@@ -22,3 +22,9 @@ post '/posts/:id' do
 
   redirect "/posts/#{params[:id]}"
 end
+
+get '/profile/:id/posts' do
+  @user = User.find(params[:id])
+  @posts = @user.posts
+  erb :user_posts
+end
