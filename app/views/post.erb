@@ -2,6 +2,15 @@
 <div class='container'>
   <h3><a href='<%= @post.url %>'><%= @post.title %></a><span> (<%= @post.url %>)</span></h3>
 
+  <form action='/upvote' method='post'>
+    <input id='post-id' type='hidden' value='<%= @post.id %>'>
+      <button id='up-vote'>+</button>
+  </form>
+  <form action='/downvote' method='post'>
+    <input type='hidden' value='<%= @post.id %>'>
+    <button id='down-vote'>-</button>
+  </form>
+
   <form action='/posts/<%= @post.id %>' method='post'>
     <textarea rows='4' cols='50' name='content' placeholder='Enter comment here'></textarea>
     <input type='submit' value='Add Comment'>

@@ -39,5 +39,6 @@ get '/profile/:id' do
   end
 end
 
-
-
+post '/upvote' do
+  p params[:data]
+end
