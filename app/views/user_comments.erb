@@ -1,3 +1,4 @@
+<%= erb :_navbar, layout: false %>
 <div class='container'>
   <h3><%= @user.username %>'s Comments</h3>
   <% @user.comments.each do |comment|%>

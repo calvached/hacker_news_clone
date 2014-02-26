@@ -23,11 +23,20 @@ post '/signup' do
   redirect '/login'
 end
 
+get '/logout' do
+  session[:user_id] = nil
+  redirect '/'
+end
+
 
 get '/profile/:id' do
   @id = session[:user_id]
-  @username = session[:username]
-  erb :profile
+  if @id
+    @username = session[:username]
+    erb :profile
+  else
+    redirect '/login'
+  end
 end
 
 
